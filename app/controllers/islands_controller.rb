@@ -10,11 +10,11 @@ class IslandsController < ApplicationController
   def new
     @island = Island.new
   end
-  
+
   def create
     @island = Island.new(island_params)
     @island.save
-    redirect_to island_path(@island)
+    redirect_to islands_path(@island)
   end
 
   private
