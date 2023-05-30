@@ -1,11 +1,18 @@
+<div class="container pt-5">
+  <h1>Welcome to Treasure Islands</h1>
+    <p>Your treasure is our pleasure! Dont be like the rest and rent some stinky accomodation with bad karmic vibes.
+    Spend some real money with us and rent out an entire island to yourself with zero nosy neighbours.
+    As a great man once said, "Do what thou Wilt!".
+    I mean come on, If you have the money why shouldnt you be able to do what you want right?
+    Sacrificial cats not supplied...</p>
 
+  <h2> Our Amazing Islands</h2>
+  <ul>
+    <% @islands.each do |island| %>
+      <li>
+        <%= link_to island.name, island_path(island) %>
 
-<h1>Islands</h1>
-<ul>
-  <% @islands.each do |island| %>
-    <li>
-      <%= link_to island.name, island_path(island) %>
-      
-    </li>
-  <% end %>
-</ul>
+      </li>
+    <% end %>
+  </ul>
+</div>
