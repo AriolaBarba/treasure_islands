@@ -12,9 +12,14 @@ class IslandsController < ApplicationController
   end
 
   def create
+    @user = current_user
     @island = Island.new(island_params)
-    @island.save
-    redirect_to islands_path(@island)
+    @island.user = @user
+    if @island.save
+      redirect_to islands_path
+    else
+      render "new"
+    end
   end
 
   private
