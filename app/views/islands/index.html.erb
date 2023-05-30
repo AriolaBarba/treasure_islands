@@ -12,8 +12,8 @@
     <% @islands.each do |island| %>
       <li>
         <%= link_to island.name, island_path(island) %>
-
       </li>
     <% end %>
   </ul>
+  <%= link_to "Add a new island", new_island_path %>
 </div>
