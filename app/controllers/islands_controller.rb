@@ -9,5 +9,6 @@ class IslandsController < ApplicationController
 
 
   def create
+    
   end
 end
