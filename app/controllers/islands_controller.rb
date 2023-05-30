@@ -10,7 +10,7 @@ class IslandsController < ApplicationController
   def new
     @island = Island.new
   end
-  
+
   def create
     @island = Island.new(island_params)
     @island.save
