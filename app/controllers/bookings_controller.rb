@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
-  def new
-    @booking = Booking.new
-    @island = Island.find(params[:island_id])
+
+  def mybookings
+    @bookings = Booking.where(user: current_user)
   end
 
   def create
@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @booking.island = @island
     @booking.user = current_user
     if @booking.save
-      redirect_to island_path(@island), alert: "Your booking was successful"
+      redirect_to mybookings_path, alert: "Your booking was successful"
     else
       render "new", status: :unprocessable_entity
     end

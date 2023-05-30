@@ -3,7 +3,14 @@
 <p><%= @island.location %></p>
 <p><%= @island.price %></p>
 
+<%= simple_form_for [@island, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <% if @island.user != current_user %>
+  <%= f.button :submit %>
+  <% else %>
+  <%= f.button :submit, disabled: true %>
+  <% end %>
+<% end %>
+
  <%= link_to "Back to islands", islands_path %>
- <div>
- <%= link_to "Book this island", new_island_booking_path(@island) %>
-</div>
