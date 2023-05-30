@@ -7,6 +7,9 @@ class IslandsController < ApplicationController
     @island = Island.find(params[:id])
   end
 
+  def new
+    @island = Island.new
+  end
 
   def create
 <<<<<<< HEAD
