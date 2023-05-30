@@ -8,8 +8,12 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @island = Island.find(params[:island_id])
     @booking.island = @island
-    @booking.save
-    redirect_to island_path(@island)
+    @booking.user = current_user
+    if @booking.save
+      redirect_to island_path(@island), alert: "Your booking was successful"
+    else
+      render "new", status: :unprocessable_entity
+    end
   end
 
   def show
@@ -19,6 +23,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :confirmed)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
