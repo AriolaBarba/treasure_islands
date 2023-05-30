@@ -12,13 +12,12 @@ class IslandsController < ApplicationController
   end
 
   def create
-    @user = current_user
     @island = Island.new(island_params)
-    @island.user = @user
+    @island.user = current_user
     if @island.save
       redirect_to islands_path
     else
-      render "new"
+      render "new", status: :unprocessable_entity
     end
   end
 

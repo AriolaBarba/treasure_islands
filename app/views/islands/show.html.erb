@@ -4,3 +4,6 @@
 <p><%= @island.price %></p>
 
  <%= link_to "Back to islands", islands_path %>
+ <div>
+ <%= link_to "Book this island", new_island_booking_path(@island) %>
+</div>
