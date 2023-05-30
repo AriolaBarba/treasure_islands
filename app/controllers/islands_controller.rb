@@ -7,9 +7,7 @@ class IslandsController < ApplicationController
     @island = Island.find(params[:id])
   end
 
-
   def create
-<<<<<<< HEAD
     @island = Island.new(island_params)
     @island.save
   end
@@ -18,7 +16,5 @@ class IslandsController < ApplicationController
 
   def island_params
   params.require(:island).permit(:name, :description, :location, :price)
-=======
->>>>>>> 0420444623dc9bacf3d16977c57a45ba761132f3
   end
 end
