@@ -1,5 +1,7 @@
-  <div class=form-new-island>
-    <h3 class="list-your-island-header">List your Island</h3>
+<div class="container">
+
+  <h3 class="list-your-island-header">List your Island</h3>
+    <div class=form-new-island>
     <%= simple_form_for @island do |f| %>
       <%= f.input :name, placeholder: 'name:', input_html: { class: 'new-island-inputs-1' } %>
       <%= f.input :location, placeholder: 'location:', input_html: { class: 'new-island-inputs-2' } %>
@@ -9,3 +11,4 @@
       <%= f.submit class: 'new-island-inputs-6' %>
     <% end %>
   </div>
+</div>

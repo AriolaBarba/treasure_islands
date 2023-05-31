@@ -1,31 +1,31 @@
 .new-island-inputs-1 {
-  position: absolute;
-  left: 3%;
-  width: 48.23%;
-  top: 10.46%;
-  bottom: 83.19%;
+  // position: absolute;
+  // left: 3%;
+  // width: 48.23%;
+  // top: 10.46%;
+  // bottom: 83.19%;
 
   background: #B2C6D5;
   border-radius: 5px;
 }
 
 .new-island-inputs-2 {
-  position: absolute;
-  left: 3%;
-  width: 48.23%;
-  top: 17.68%;
-  bottom: 75.97%;
+  // position: absolute;
+  // left: 3%;
+  // width: 48.23%;
+  // top: 17.68%;
+  // bottom: 75.97%;
 
   background: #B2C6D5;
   border-radius: 5px;
 }
 
 .new-island-inputs-3 {
-  position: absolute;
-  left: 3%;
-  width: 48.23%;
-  top: 25.03%;
-  bottom: 68.62%;
+  // position: absolute;
+  // left: 3%;
+  // width: 48.23%;
+  // top: 25.03%;
+  // bottom: 68.62%;
 
   background: #B2C6D5;
   border-radius: 5px;
@@ -33,11 +33,11 @@
 
 
 .new-island-inputs-4 {
-  position: absolute;
-  left: 3%;
-  right: 48.69%;
-  top: 32.13%;
-  bottom: 4.73%;
+  // position: absolute;
+  // left: 3%;
+  // right: 48.69%;
+  // top: 32.13%;
+  // bottom: 4.73%;
 
 
   background: #B2C6D5;
@@ -45,30 +45,30 @@
 }
 
 .new-island-inputs-5 {
-  position: absolute;
-  width: 43%;
-  right: 3.94%;
-  top: 10.46%;
-  bottom: 17.62%;
+  // position: absolute;
+  // width: 43%;
+  // right: 3.94%;
+  // top: 10.46%;
+  // bottom: 17.62%;
 }
 
 .new-island-inputs-6 {
-  position: absolute;
-  width: 43%;
-  right: 4.03%;
-  top: 84.01%;
-  bottom: 4.73%;
+  // position: absolute;
+  // width: 43%;
+  // right: 4.03%;
+  // top: 84.01%;
+  // bottom: 4.73%;
 
   background: #f38080;
   border-radius: 5px;
 }
 
 .list-your-island-header {
-  position: absolute;
-  left: 39%;
-  right: 30%;
-  top: 1%;
-  bottom: 90%;
+  // position: absolute;
+  // left: 39%;
+  // right: 30%;
+  // top: 1%;
+  // bottom: 90%;
 
   font-family: 'Cinzel';
   font-style: normal;
@@ -77,10 +77,13 @@
   line-height: 24px;
   /* or 67% */
 
-  display: flex;
-  align-items: center;
-  text-align: center;
+  // display: flex;
+  // align-items: center;
+  justify-content: center;
+  // text-align: center;
   letter-spacing: 0.38px;
+  margin: 20px auto;
 
-  color: rgba(255, 255, 255, 0.72);
+  // color: rgba(255, 255, 255, 0.72);
+  color: rbg(120, 120, 120);
 }
