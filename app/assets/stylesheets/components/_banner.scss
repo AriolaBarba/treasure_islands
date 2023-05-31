@@ -8,8 +8,10 @@
 
 .banner {
   width: 100%;
+  max-width: 1200px;
   height: 500px;
-  background-size: cover;
+  display: flex;
+  // background-size: cover;
   background-position: center;
-  background-image: asset-url("island.jpg");
+  // background-image: asset-url("island.jpg");
 }
