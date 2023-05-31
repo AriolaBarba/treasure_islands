@@ -1,3 +1,4 @@
+<div class="index-background">
 <div class="container pt-5">
   <div>
     <%= link_to "Add a new island", new_island_path, class: "btn btn-primary mt-3 btn-lg" %>
@@ -18,7 +19,7 @@
     <% @islands.each do |island| %>
       <div class="col-md-4 mb-4">
         <div class="card">
-          <%# <%= link_to image_tag("images/#{island.image_url}"), island_path(island) %> %>
+
           <div class="card-body">
             <h5 class="card-title"><%= link_to island.name, island_path(island) %></h5>
 
@@ -27,4 +28,5 @@
       </div>
     <% end %>
   </div>
+</div>
 </div>
