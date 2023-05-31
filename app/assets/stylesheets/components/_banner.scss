@@ -1,0 +1,15 @@
+// #banner {
+ // width: 100%;
+ // background-image: url("../components/ ");
+ // height: 500px;
+  // background-size: cover;
+  // background-position: center;
+// }
+
+.banner {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-image: asset-url("island.jpg");
+}
