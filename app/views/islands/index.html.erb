@@ -1,19 +1,30 @@
-
 <div class="container pt-5">
-  <h1>Welcome to Treasure Islands</h1>
-    <p>Your treasure is our pleasure! Dont be like the rest and rent some stinky accomodation with bad karmic vibes.
-    Spend some real money with us and rent out an entire island to yourself with zero nosy neighbours.
-    As a great man once said, "Do what thou Wilt!".
-    I mean come on, If you have the money why shouldnt you be able to do what you want right?
-    Sacrificial cats not supplied...</p>
+  <div>
+    <%= link_to "Add a new island", new_island_path, class: "btn btn-primary mt-3 btn-lg" %>
+  </div>
 
-  <h2> Our Amazing Islands</h2>
-  <ul>
+
+  <div class="container pt-5">
+   <h1>Welcome to Treasure Islands</h1>
+    <p>Your treasure is our pleasure! Don't be like the rest and rent some stinky accommodation with bad karmic vibes.
+      Spend some real money with us and rent out an entire island to yourself with zero nosy neighbors.
+      As a great man once said, "Do what thou Wilt!".
+      I mean, come on, if you have the money, why shouldn't you be able to do what you want, right?
+      Sacrificial cats not supplied...</p>
+  </div>
+
+  <h2>Our Amazing Islands</h2>
+  <div class="row">
     <% @islands.each do |island| %>
-      <li>
-        <%= link_to island.name, island_path(island) %>
-      </li>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <%# <%= link_to image_tag("images/#{island.image_url}"), island_path(island) %> %>
+          <div class="card-body">
+            <h5 class="card-title"><%= link_to island.name, island_path(island) %></h5>
+
+          </div>
+        </div>
+      </div>
     <% end %>
-  </ul>
-  <%= link_to "Add a new island", new_island_path %>
+  </div>
 </div>
