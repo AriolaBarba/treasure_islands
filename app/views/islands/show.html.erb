@@ -1,14 +1,17 @@
+<div class="banner">
+  <% if @island.photos.attached? %>
+  <%= cl_image_tag @island.photos[0].key, width: "60%", height: "auto", crop: :fill %>
+  <%= cl_image_tag @island.photos[1].key, width: "60%", height: "auto",  crop: :fill %>
+  <% else %>
+
+  <%= image_tag "island2.jpg", width: "60%", height: "auto"; %>
+  <%= image_tag "island3.jpg", width: "60%", height: "auto"; %>
+  <% end %>
+</div>
 
 <div class="container pt-5">
   <h2><%= @island.name %></h2>
 
-  <% if @island.photos.attached? %>
-  <%= cl_image_tag @island.photos[0].key, height: 300, width: 400, crop: :fill %>
-  <%= cl_image_tag @island.photos[1].key, height: 300, width: 400, crop: :fill %>
-  <% else %>
-  <img src="" alt="Island photo">
-  <img src="" alt="Island photo">
-  <% end %>
 
   <p><%= @island.description %></p>
   <p><%= @island.location %></p>
@@ -23,8 +26,8 @@
   <% else %>
   <%= f.button :submit, disabled: true %>
   <% end %>
+  <% end %>
 
-<div class="banner">
   <%= link_to "Back to islands", islands_path %>
-</div>
+
 </div>
