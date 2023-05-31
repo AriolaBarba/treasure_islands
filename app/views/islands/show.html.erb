@@ -1,7 +1,20 @@
+
+<div class="container pt-5">
+  <h2><%= @island.name %></h2>
+
+<% if @island.photos.attached? %>
+<%= cl_image_tag @island.photos[0].key, height: 300, width: 400, crop: :fill %>
+<%= cl_image_tag @island.photos[1].key, height: 300, width: 400, crop: :fill %>
+<% else %>
+<img src="" alt="Island photo">
+<img src="" alt="Island photo">
+<% end %>
+
 <h2><%= @island.name %></h2>
 <p><%= @island.description %></p>
 <p><%= @island.location %></p>
 <p><%= @island.price %></p>
+
 
 
 
@@ -12,7 +25,26 @@
   <%= f.button :submit %>
   <% else %>
   <%= f.button :submit, disabled: true %>
-  <% end %>
-<% end %>
 
- <%= link_to "Back to islands", islands_path %>
+<div class="banner">
+</div>
+
+
+
+  <p><%= @island.description %></p>
+  <p><%= @island.location %></p>
+  <p><%= @island.price %></p>
+
+  <%= simple_form_for [@island, @booking] do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <% if @island.user != current_user %>
+    <%= f.button :submit %>
+    <% else %>
+    <%= f.button :submit, disabled: true %>
+    <% end %>
+
+  <% end %>
+
+  <%= link_to "Back to islands", islands_path %>
+</div>
