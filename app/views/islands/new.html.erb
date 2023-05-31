@@ -7,7 +7,8 @@
       <%= f.input :location, placeholder: 'location:', input_html: { class: 'new-island-inputs-2' } %>
       <%= f.input :price, placeholder: 'price:', input_html: { class: 'new-island-inputs-3' }%>
       <%= f.text_area :description, placeholder: 'description:', class: "new-island-inputs-4" %>
-      <%= f.input :photos, as: :file, input_html: { multiple: true }, input_html: { class: 'new-island-inputs-5' } %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true }%>
+      <%# , input_html: { class: 'new-island-inputs-5' }  %>
       <%= f.submit class: 'new-island-inputs-6' %>
     <% end %>
   </div>
