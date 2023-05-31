@@ -3,6 +3,8 @@
 <p><%= @island.location %></p>
 <p><%= @island.price %></p>
 
+
+
 <%= simple_form_for [@island, @booking] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
