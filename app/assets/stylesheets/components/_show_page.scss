@@ -1,0 +1,56 @@
+.header {
+  padding-left: 3px;
+  padding-top: 20px;
+  padding-bottom: 3px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.location {
+  padding-left: 3px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  // align-items: center;
+}
+
+.description {
+  padding-right: 100px;
+}
+
+.booking {
+  border-radius: 7px;
+  background-color: white;
+  // margin-top: 5px;
+  padding: 20px 20px 20px 20px;
+  box-shadow: 3px 3px 3px rgb(227, 227, 227);
+
+  .booking-form {
+    border-radius: 10px;
+    padding: 30px 20px 30px 20px;
+    right: 0%;
+  }
+
+  .btn-booking {
+    background-color: rgb(46, 46, 65);
+    padding: 5px;
+    width: 100%;
+    color: white;
+
+    &:hover {
+      background-color: black;
+      color: antiquewhite;
+    }
+
+  }
+}
+
+.d-block {
+  border-radius: 5px;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+}
