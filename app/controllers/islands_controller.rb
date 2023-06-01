@@ -1,6 +1,14 @@
 class IslandsController < ApplicationController
   def index
     @islands = Island.all
+    @markers = @islands.map do |island|
+      {
+        lat: island.latitude,
+        lng: island.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: { island: island }),
+        marker_html: render_to_string(partial: "marker")
+      }
+    end
   end
 
   def show
@@ -10,6 +18,10 @@ class IslandsController < ApplicationController
 
   def new
     @island = Island.new
+    @island.latitude = 37.1234
+    @island.longitude = -122.5678
+    @island.save
+    end
   end
 
   def create
@@ -27,4 +39,4 @@ class IslandsController < ApplicationController
   def island_params
     params.require(:island).permit(:name, :description, :location, :price, photos: [])
   end
-end
+ 

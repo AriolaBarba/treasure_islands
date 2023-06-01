@@ -6,12 +6,26 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
   </head>
 
   <body>
     <%= render "shared/navbar" %>
     <%= yield %>
+    <div id="map"></div>
+
+    <%= javascript_include_tag "https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js" %>
+<script>
+  mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [-74.5, 40], // Example center coordinates
+    zoom: 9 // Example zoom level
+  });
+</script>
   </body>
 </html>
