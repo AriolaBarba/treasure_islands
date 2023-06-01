@@ -11,17 +11,15 @@
       <span class="navbar-toggler-icon"></span>
 
     </button>
+      <h4 style="margin-bottom: 0px;">TREASURE ISLANDS</h4>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav me-auto", style="align-items:center;">
         <% if user_signed_in? %>
           <li class="nav-item active">
 
-           <%= link_to "Add a new island", new_island_path, class: "btn btn-primary mt-2 btn-sm" %>
+           <%= link_to "Add a new island", new_island_path, class: "hyperlink-gold" %>
 
-          </li>
-          <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "bluesteel.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
