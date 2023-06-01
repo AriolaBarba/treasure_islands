@@ -4,4 +4,6 @@ class Island < ApplicationRecord
   attribute :latitude, :decimal
   attribute :longitude, :decimal
   attribute :address, :string
+  geocoded_by :location
+  after_validation :geocode
 end
