@@ -1,32 +1,30 @@
-<div class="banner">
-  <% if @island.photos.attached? %>
-  <%= cl_image_tag @island.photos[0].key, width: "60%", height: "auto", crop: :fill %>
-  <%= cl_image_tag @island.photos[1].key, width: "60%", height: "auto",  crop: :fill %>
-  <% else %>
-
-  <%= image_tag "island2.jpg", width: "60%", height: "auto"; %>
-  <%= image_tag "island3.jpg", width: "60%", height: "auto"; %>
-  <% end %>
-</div>
-
 <div class="container pt-5">
   <h2><%= @island.name %></h2>
+  <div class="banner">
+    <% if @island.photos.attached? %>
+      <%= cl_image_tag @island.photos[0].key, width: "60%", height: "auto", crop: :fill %>
+      <%= cl_image_tag @island.photos[1].key, width: "60%", height: "auto", crop: :fill %>
+    <% else %>
+      <%= image_tag "island2.jpg", width: "60%", height: "auto" %>
+      <%= image_tag "island3.jpg", width: "60%", height: "auto" %>
+    <% end %>
+  </div>
 
-<p><%= @island.description %></p>
-<p><%= @island.location %></p>
-<p><%= @island.price %></p>
-
+  <p><%= @island.description %></p>
+  <p><%= @island.location %></p>
+  <p><%= @island.price %></p>
 
   <%= simple_form_for [@island, @booking] do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <% if @island.user != current_user %>
-  <%= f.button :submit %>
-  <% else %>
-  <%= f.button :submit, disabled: true %>
-  <% end %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <% if @island.user != current_user %>
+      <%= f.button :submit %>
+    <% else %>
+      <%= f.button :submit, disabled: true %>
+    <% end %>
   <% end %>
 
-  <%= link_to "Back to islands", islands_path %>
-
+  <div class="banner">
+    <%= link_to "Back to islands", islands_path %>
+  </div>
 </div>
