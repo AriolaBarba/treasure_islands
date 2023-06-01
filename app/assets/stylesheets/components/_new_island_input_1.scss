@@ -1,33 +1,33 @@
 .new-island-inputs-1 {
   position: absolute;
   left: 3%;
-  width: 48.69%;
+  width: 48.23%;
   top: 10.46%;
   bottom: 83.19%;
 
-  background: #B2C6D5;
+  background: #b2c6d574;
   border-radius: 5px;
 }
 
 .new-island-inputs-2 {
   position: absolute;
   left: 3%;
-  width: 48.69%;
+  width: 48.23%;
   top: 17.68%;
   bottom: 75.97%;
 
-  background: #B2C6D5;
+  background: #b2c6d574;
   border-radius: 5px;
 }
 
 .new-island-inputs-3 {
   position: absolute;
   left: 3%;
-  width: 48.69%;
+  width: 48.23%;
   top: 25.03%;
   bottom: 68.62%;
 
-  background: #B2C6D5;
+  background: #b2c6d574;
   border-radius: 5px;
 }
 
@@ -40,6 +40,50 @@
   bottom: 4.73%;
 
 
-  background: #B2C6D5;
+  background: #b2c6d574;
   border-radius: 5px;
+}
+
+.new-island-inputs-5 {
+  position: absolute;
+  width: 43%;
+  right: 3.94%;
+  top: 10.46%;
+  bottom: 17.62%;
+
+  background: #b2c6d574;
+  border-radius: 5px;
+}
+
+.new-island-inputs-6 {
+  position: absolute;
+  width: 43%;
+  right: 4.03%;
+  top: 87.01%;
+  bottom: 4.73%;
+
+  background: #f3808085;
+  border-radius: 50px;
+}
+
+.list-your-island-header {
+  position: absolute;
+  left: 39%;
+  right: 30%;
+  top: 1%;
+  bottom: 90%;
+
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 24px;
+  /* or 67% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.38px;
+
+  color: rgba(37, 37, 37, 0.72);
 }

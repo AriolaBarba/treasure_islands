@@ -13,14 +13,13 @@
     <%= f.submit class: 'btn btn-flat' %>
   <% end %>
   <div class=form-new-island>
-    <h3>List your Island</h3>
+    <h3 class="list-your-island-header">List your Island</h3>
     <%= simple_form_for @island do |f| %>
       <%= f.input :name, placeholder: 'name:', input_html: { class: 'new-island-inputs-1' } %>
       <%= f.input :location, placeholder: 'location:', input_html: { class: 'new-island-inputs-2' } %>
       <%= f.input :price, placeholder: 'price:', input_html: { class: 'new-island-inputs-3' }%>
       <%= f.text_area :description, placeholder: 'description:', class: "new-island-inputs-4" %>
-
-      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-      <%= f.submit class: 'btn btn-flat' %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true }, input_html: { class: 'new-island-inputs-5' } %>
+      <%= f.submit class: 'new-island-inputs-6' %>
     <% end %>
   </div>
