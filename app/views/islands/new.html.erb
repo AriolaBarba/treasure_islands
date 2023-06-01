@@ -1,25 +1,24 @@
 
-  <div class="new-background ">
-  mr-20
-    <div class="content-container">
-      <div class="col-8">
-        <div class="box1">
-          <h2>Islands</h2>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="box2">
-          <h3 class="list-your-island-header">List your Island</h3>
-          <%= simple_form_for @island do |f| %>
-            <%= f.input :name, placeholder: 'Coral Island' %>
-            <%= f.input :location, placeholder: 'The Great Barrier Reef' %>
-            <%= f.input :price %>
-            <%= f.input :description, as: :text, input_html: { rows: 3 }  %>
-            <%= f.input :photos, as: :file, input_html: { multiple: true }  %>
-            <%= f.submit %>
-          <% end %>
-        </div>
-      </div>
 
+<div class="new-background ">
+  <div class="content-container">
+    <div class="col-8">
+      <div class="box1">
+        <h2>Islands</h2>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="box2">
+        <h3 class="list-your-island-header">List your Island</h3>
+        <%= simple_form_for @island do |f| %>
+          <%= f.input :name, placeholder: 'Coral Island' %>
+          <%= f.input :location, placeholder: 'The Great Barrier Reef' %>
+          <%= f.input :price %>
+          <%= f.input :description, as: :text, input_html: { rows: 3 }  %>
+          <%= f.input :photos, as: :file, input_html: { multiple: true }  %>
+          <%= f.submit %>
+        <% end %>
+      </div>
     </div>
   </div>
+</div>
