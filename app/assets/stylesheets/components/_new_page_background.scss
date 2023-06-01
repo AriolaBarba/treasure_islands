@@ -1,11 +1,8 @@
 .new-background {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   background-image: url('/assets/white-sand-beaches-hd-wallpaper-3840x2160.jpg');
   background-size: cover;
+  width: 100vw;
+  height: 100vh;
 }
 
 .content-container {
@@ -26,21 +23,49 @@
 
 }
 
+.col-8 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
 
-.box {
+
+.box1 {
 
   padding: 40px;
-  background: #04004b;
+  margin-right: 20px;
+  background: #001e4d;
   color: #fad73b;
   -webkit-box-shadow: -10px 30px 10px 0 rgba(0, 0, 0, 0.08);
   box-shadow: -10px 10px 10px 0 rgba(0, 0, 0, 0.08);
   position: absolute;
-  top: 30px; /* Adjust the value as needed */
-  right: 300px; /* Adjust the value as needed */
-  left: 0;
+  top: 50px; /* Adjust the value as needed */
+  right: 0; /* Adjust the value as needed */
+  left: 0px;
   overflow-y: auto;
   word-wrap: break-word; /* Add this line to wrap text within the box */
   height: auto;
+}
+
+.box2 {
+  padding: 20px 40px;
+  margin-left: 20px;
+  background: #4b000043;
+  color: #fad73b;
+  -webkit-box-shadow: -10px 30px 10px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: -10px 10px 10px 0 rgba(0, 0, 0, 0.08);
+  // position: absolute;
+  // top: 50px; /* Adjust the value as needed */
+  // right: 0px; /* Adjust the value as needed */
+  // left: 0;
+  // overflow-y: auto;
+  // word-wrap: break-word; /* Add this line to wrap text within the box */
+  height: 90vh;
 }
 
 input[type="text"]::placeholder {
