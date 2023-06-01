@@ -5,7 +5,7 @@
   // top: 10.46%;
   // bottom: 83.19%;
 
-  background: #B2C6D5;
+  background: #b2c6d574;
   border-radius: 5px;
 }
 
@@ -16,7 +16,7 @@
   // top: 17.68%;
   // bottom: 75.97%;
 
-  background: #B2C6D5;
+  background: #b2c6d574;
   border-radius: 5px;
 }
 
@@ -27,7 +27,7 @@
   // top: 25.03%;
   // bottom: 68.62%;
 
-  background: #B2C6D5;
+  background: #b2c6d574;
   border-radius: 5px;
 }
 
@@ -40,27 +40,32 @@
   // bottom: 4.73%;
 
 
-  background: #B2C6D5;
+  background: #b2c6d574;
   border-radius: 5px;
 }
 
 .new-island-inputs-5 {
-  // position: absolute;
-  // width: 43%;
-  // right: 3.94%;
-  // top: 10.46%;
-  // bottom: 17.62%;
+
+  position: absolute;
+  width: 43%;
+  right: 3.94%;
+  top: 10.46%;
+  bottom: 17.62%;
+
+  background: #b2c6d574;
+  border-radius: 5px;
 }
 
 .new-island-inputs-6 {
-  // position: absolute;
-  // width: 43%;
-  // right: 4.03%;
-  // top: 84.01%;
-  // bottom: 4.73%;
+  position: absolute;
+  width: 43%;
+  right: 4.03%;
+  top: 87.01%;
+  bottom: 4.73%;
 
-  background: #f38080;
-  border-radius: 5px;
+
+  background: #f3808085;
+  border-radius: 50px;
 }
 
 .list-your-island-header {
@@ -84,6 +89,7 @@
   letter-spacing: 0.38px;
   margin: 20px auto;
 
-  // color: rgba(255, 255, 255, 0.72);
-  color: rbg(120, 120, 120);
+
+  color: rgba(37, 37, 37, 0.72);
+
 }

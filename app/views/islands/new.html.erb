@@ -1,7 +1,20 @@
-<div class="container">
 
-  <h3 class="list-your-island-header">List your Island</h3>
-    <div class=form-new-island>
+  <h3>List your Island</h3>
+  <%= simple_form_for @island do |f| %>
+    <%= f.input :name, placeholder: 'name:' %>
+    <%= f.input :location, placeholder: 'location:'%>
+    <%= f.input :description, placeholder: 'description:' %>
+    <%= f.input :price %>
+
+     <div class="form-group">
+    <%= f.label :image %>
+
+  </div>
+
+    <%= f.submit class: 'btn btn-flat' %>
+  <% end %>
+  <div class=form-new-island>
+    <h3 class="list-your-island-header">List your Island</h3>
     <%= simple_form_for @island do |f| %>
       <%= f.input :name, placeholder: 'name:', input_html: { class: 'new-island-inputs-1' } %>
       <%= f.input :location, placeholder: 'location:', input_html: { class: 'new-island-inputs-2' } %>
