@@ -1,14 +1,32 @@
-.new-background {
-  background-image: url('/assets/white-sand-beaches-hd-wallpaper-3840x2160.jpg');
+
+.list-your-island-header {
+  font-family: 'Cormorant Garamond', serif;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.your-islands-header {
+  font-family: 'Cormorant Garamond', serif;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.header-image {
+  width: 100%;
+  height: 220px;
+  left: 447px;
+  top: 83px;
+  background-image: url('/assets/new-background.jpg');
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
+  background-position: center;
+
 }
 
 .content-container {
   display: flex;
   justify-content: space-between;
   margin-right: 20px;
+  margin-top: 20px;
 }
 
 .col-4 {
@@ -39,12 +57,10 @@
 
   padding: 40px;
   margin-right: 20px;
-  background: #001e4d;
-  color: #fad73b;
-  -webkit-box-shadow: -10px 30px 10px 0 rgba(0, 0, 0, 0.08);
-  box-shadow: -10px 10px 10px 0 rgba(0, 0, 0, 0.08);
+  background: rgba(174, 141, 74, 0.1);
+  color: #AE8D4A;
   position: absolute;
-  top: 50px; /* Adjust the value as needed */
+  margin-top: 225px; /* Adjust the value as needed */
   right: 0; /* Adjust the value as needed */
   left: 0px;
   overflow-y: auto;
@@ -53,19 +69,18 @@
 }
 
 .box2 {
-  padding: 20px 40px;
-  margin-left: 20px;
-  background: #4b000043;
-  color: #fad73b;
-  -webkit-box-shadow: -10px 30px 10px 0 rgba(0, 0, 0, 0.08);
-  box-shadow: -10px 10px 10px 0 rgba(0, 0, 0, 0.08);
+  padding: 20px 50px;
+  margin-left: 5px;
+  background: rgba(174, 141, 74, 0.1);
+  color: #AE8D4A;
   // position: absolute;
-  // top: 50px; /* Adjust the value as needed */
+  margin-top: 225px; /* Adjust the value as needed */
   // right: 0px; /* Adjust the value as needed */
   // left: 0;
   // overflow-y: auto;
   // word-wrap: break-word; /* Add this line to wrap text within the box */
   height: 90vh;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 input[type="text"]::placeholder {
