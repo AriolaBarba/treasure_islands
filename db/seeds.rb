@@ -33,8 +33,8 @@ island4.photos.attach(io: File.open("app/assets/images/Islandseeds/maldives2.jpe
 island4.save
 
 island5 = Island.create(user: user, name: "Turtle Island", description: "Hawaii is a tropical paradise known for its stunning beaches, volcanic landscapes, and rich Polynesian culture. With its lush rainforests, towering waterfalls, and world-class surf spots, Hawaii is a dream destination for outdoor enthusiasts. Whether exploring the vibrant city of Honolulu or hiking through the scenic Waimea Canyon, Hawaii offers a diverse range of experiences.", location: "69-425 Waikōloa Beach Dr, Waikoloa Village, HI 96738, United States", price: "£3.9M")
-island5.photos.attach(io: File.open("app/assets/images/Islandseeds/hawaii1.jpeg"), filename: "hawaii1.jpeg", content_type: "image/jpeg")
-island5.photos.attach(io: File.open("app/assets/images/Islandseeds/hawaii2.jpeg"), filename: "hawaii2.jpeg", content_type: "image/jpeg")
+island5.photos.attach(io: File.open("app/assets/images/Islandseeds/hawaii1.png"), filename: "hawaii1.png", content_type: "image/png")
+island5.photos.attach(io: File.open("app/assets/images/Islandseeds/hawaii2.png"), filename: "hawaii2.png", content_type: "image/png")
 island5.save
 
 island6 = Island.create(user: user, name: "White Sands Island", description: "Indonesia is an archipelago of over 17,000 islands, each offering its own unique charm. From the iconic paradise of Bali with its rice terraces and ancient temples to the untouched beauty of Komodo Island with its legendary Komodo dragons, Indonesia is a haven for nature lovers and adventure seekers.", location: "8.5850 S, 119.4411 E", price: "£2.2M")
