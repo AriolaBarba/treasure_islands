@@ -8,6 +8,27 @@
 .list-your-island-header {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 500;
+  font-size: 40px;
+}
+
+
+.your-islands {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+}
+
+.your-island-cards {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #fffbf2a8;
+  // padding-bottom: 20px;
+}
+
+.island-card-content {
+  padding-left: 20px;
 
 }
 
@@ -82,7 +103,7 @@
   // left: 0;
   // overflow-y: auto;
   // word-wrap: break-word; /* Add this line to wrap text within the box */
-  height: 90vh;
+  height: 95vh;
   font-family: 'Cormorant Garamond', serif;
 }
 
