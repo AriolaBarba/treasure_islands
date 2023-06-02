@@ -9,6 +9,7 @@ Booking.destroy_all
 Island.destroy_all
 User.destroy_all
 
+
 user = User.create(email: "lola@gmail.com", password: "claralala")
 
 island1 = Island.create(user: user, name: "Monkey Island", description: "The Bahamas is a tropical paradise consisting of 700 islands and cays in the Atlantic Ocean. It offers stunning white sandy beaches, crystal-clear turquoise waters, and vibrant coral reefs. With its luxurious resorts, water sports, and vibrant culture, the Bahamas is a perfect destination for relaxation and adventure.", location: "3MJM+2X Nassau, The Bahamas", price: "£2.0M")
