@@ -12,10 +12,10 @@
         I mean, come on, if you have the money, why shouldn't you be able to do what you want, right?
         Sacrificial cats not supplied...</p>
   </div>
-  </div>
+</div>
 
 <div class="container pt-5">
-    <h2>Our Islands</h2>
+    <h2>Find Your Island</h2>
     <div class="row">
       <% @islands.each do |island| %>
         <div class="col-md-3 mb-3">
@@ -24,8 +24,7 @@
             <%# <%= link_to image_tag("images/#{island.image_url}"), island_path(island) %>
             <div class="card-body">
               <h5 class="card-title"><%= link_to island.name, island_path(island) %></h5>
-              <img src="<%=island.photos[0]%>" alt="monkey">
-
+              <img class="cardimage" src="<%=island.photos[0]%>" alt="monkey">
             </div>
           </div>
         </div>
