@@ -1,12 +1,20 @@
 class IslandsController < ApplicationController
   def index
     @islands = Island.all
-
   end
 
   def show
     @island = Island.find(params[:id])
+    @islands = Island.all
     @booking = Booking.new
+    @markers = @islands.geocoded.map do |island|
+      {
+        lat: island.latitude,
+        lng: island.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: { island: island }),
+        marker_html: render_to_string(partial: "marker")
+      }
+    end
   end
 
   def new

@@ -22,15 +22,17 @@
 
 .booking {
   border-radius: 7px;
-  background-color: white;
+  background-color: rgba(174, 141, 74, 0.2);
+
   // margin-top: 5px;
   padding: 20px 20px 20px 20px;
   box-shadow: 3px 3px 3px rgb(227, 227, 227);
 
   .booking-form {
     border-radius: 10px;
-    padding: 30px 20px 30px 20px;
+    padding: 15px 15px 15px 15px;
     right: 0%;
+    width: 400px;
   }
 
   .btn-booking {
@@ -54,4 +56,7 @@
 
 p {
   font-family: 'Raleway', sans-serif;
+}
+
+.banner-show { height: 100px
 }
