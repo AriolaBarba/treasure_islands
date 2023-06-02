@@ -1,7 +1,14 @@
 class IslandsController < ApplicationController
   def index
-    @islands = Island.geocoded
-    @markers = @islands.map do |island|
+    @islands = Island.all
+
+  end
+
+  def show
+    @island = Island.find(params[:id])
+    @islands = Island.all
+    @booking = Booking.new
+    @markers = @islands.geocoded.map do |island|
       {
         lat: island.latitude,
         lng: island.longitude,
@@ -9,11 +16,6 @@ class IslandsController < ApplicationController
         marker_html: render_to_string(partial: "marker")
       }
     end
-  end
-
-  def show
-    @island = Island.find(params[:id])
-    @booking = Booking.new
   end
 
   def new

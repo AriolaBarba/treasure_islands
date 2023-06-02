@@ -15,15 +15,15 @@ export default class extends Controller {
 
     this.map = new mapboxgl.Map({
       container: this.element,
-      style: "mapbox://styles/wisbeach/clid86jxk002e01pgdte5fzxh"
+      style: "mapbox://styles/mapbox/streets-v10"
     });
 
-    this.map.addControl(
-      new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken,
-        mapboxgl: mapboxgl
-      })
-    );
+    // this.map.addControl(
+    //   new MapboxGeocoder({
+    //     accessToken: mapboxgl.accessToken,
+    //     mapboxgl: mapboxgl
+    //   })
+    // );
 
     this.addMarkersToMap();
     this.fitMapToMarkers();
