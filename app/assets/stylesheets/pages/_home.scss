@@ -1,8 +1,15 @@
 // Specific CSS for your home-page
- index-action
 
-.background {
-  background-image: url('/assets/bonza bay (2).JPG');
+// .background {
+//   background-image: url('/assets/bonza bay (2).JPG');
+//   background-size: cover;
+// }
+.index-background {
+  // background-image: asset-url('');
+  background-image: url('island.jpg');
   background-size: cover;
+  background-position: top;
+  height: 100vh;
+  background-color: aqua;
+  color: rgb(247, 243, 15);
 }
-
