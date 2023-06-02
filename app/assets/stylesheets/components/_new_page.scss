@@ -1,15 +1,17 @@
 
-.list-your-island-header {
-  font-family: 'Cormorant Garamond', serif;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
 .your-islands-header {
   font-family: 'Cormorant Garamond', serif;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
+  font-weight: 500;
+  font-size: 47px;
 }
+
+.list-your-island-header {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+
+}
+
+
 
 .header-image {
   width: 100%;
@@ -61,7 +63,7 @@
   background: rgba(174, 141, 74, 0.1);
   color: #AE8D4A;
   position: absolute;
-  margin-top: 225px; /* Adjust the value as needed */
+  margin-top: 220px; /* Adjust the value as needed */
   right: 0; /* Adjust the value as needed */
   left: 0px;
   overflow-y: auto;
@@ -75,7 +77,7 @@
   background: rgba(174, 141, 74, 0.1);
   color: #AE8D4A;
   // position: absolute;
-  margin-top: 225px; /* Adjust the value as needed */
+  margin-top: 220px; /* Adjust the value as needed */
   // right: 0px; /* Adjust the value as needed */
   // left: 0;
   // overflow-y: auto;

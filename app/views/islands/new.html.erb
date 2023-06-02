@@ -5,7 +5,17 @@
       <div class="col-8">
         <div class="box1">
           <h2 class="your-islands-header">Your Islands</h2>
-          <div id="new-island-results"></div>
+          <div class="your-islands-card">
+          <% if @my_islands != nil %>
+          <% @my_islands.each do |island| %>
+          <%= island.name %>
+          <%= island.location %>
+          <%= island.price %>
+          <%= cl_image_tag island.photos[0].key %>
+          <% end %>
+          <% end %>
+          </div>
+          <%# <div id="new-island-results"></div> %>
         </div>
       </div>
       <div class="col-4">
