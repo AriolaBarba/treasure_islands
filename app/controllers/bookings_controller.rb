@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to mybookings_path, alert: "Your booking was successful"
     else
-      render :new, status: :unprocessable_entity
+      render island_path(@island), status: :unprocessable_entity
     end
   end
 
