@@ -18,9 +18,10 @@ class IslandsController < ApplicationController
 
   def new
     @island = Island.new
-    @island.latitude = 37.1234
-    @island.longitude = -122.5678
-    @island.save
+    @my_islands = Island.where(user: current_user)
+    # @island.latitude = 37.1234
+    # @island.longitude = -122.5678
+    # @island.save
   end
 
   def create
