@@ -19,7 +19,8 @@
   padding: 30px 30px 30px 30px;
 }
 
-.card {
+.card-index {
+  display: flex;
   width: 300px;
   height: 500px;
    // background-image: url(https://images.unsplash.com/photo-1456840449473-320da5d25d3c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80);
@@ -45,6 +46,17 @@ h1, h2, h4 {
   // transform: none|transform-functions|initial|inherit;
 }
 
-h5 {
+.card-title {
+  padding: 20px;
+}
+.card-title a {
   text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px 1px rgb(44, 42, 42);
+}
+
+.card-body {
+  display: flex;
+  align-items: end;
+  // box-shadow:1px 1px 1px rgb(59, 56, 56) 
 }
