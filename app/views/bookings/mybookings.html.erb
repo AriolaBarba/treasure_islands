@@ -1,14 +1,14 @@
-<h2>My Bookings</h2>
-      <div class="container">
+
+<div class="container">
+  <h2 class="mb-3 mt-3" >My Bookings</h2>
     <% @bookings.each do |booking| %>
-        <div class="card-booking">
-          <ul>
-          <li>
-            <%= booking.island.name %>
-            <%= booking.start_date %>
-            <%= booking.end_date %>
-          </li>
-          </ul>
-        </div>
-        <% end %>
+    <div class="booking-card-container">
+      <%= cl_image_tag booking.island.photos[0].key, height: "160px", width: "200px" %>
+      <div class="booking-card-content">
+          <p>Island name: <%= booking.island.name %></p>
+          <p>Start date: <%= booking.start_date %></p>
+          <p>End date: <%= booking.end_date %></p>
       </div>
+    </div>
+  <% end %>
+</div>

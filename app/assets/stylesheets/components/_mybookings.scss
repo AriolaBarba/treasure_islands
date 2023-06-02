@@ -1,11 +1,15 @@
-.card-booking {
-  background-color: white;
-  text-align: center;
-  padding: 20px 30px 20px 30px;
+
+.booking-card-container {
+  display: flex;
   margin-bottom: 20px;
+  align-items: center;
+  height: 160px;
 }
 
-.card-booking li {
-  text-decoration: none;
-  list-style-type: none;
+
+
+.booking-card-content {
+  background-color: white;
+  // text-align: left;
+  padding: 20px;
 }
