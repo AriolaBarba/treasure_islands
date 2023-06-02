@@ -31,6 +31,7 @@ class IslandsController < ApplicationController
       redirect_to islands_path
     else
       render "new", status: :unprocessable_entity
+      render partial: 'new_island_results', locals: { island: @island }
     end
   end
 
