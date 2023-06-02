@@ -1,7 +1,6 @@
 class IslandsController < ApplicationController
   def index
     @islands = Island.all
-
   end
 
   def show
@@ -20,10 +19,10 @@ class IslandsController < ApplicationController
 
   def new
     @island = Island.new
-    @island.latitude = 37.1234
-    @island.longitude = -122.5678
-    @island.save
-    end
+    @my_islands = Island.where(user: current_user)
+    # @island.latitude = 37.1234
+    # @island.longitude = -122.5678
+    # @island.save
   end
 
   def create
@@ -31,9 +30,9 @@ class IslandsController < ApplicationController
     @island.user = current_user
     if @island.save
       redirect_to islands_path
+      # render partial: 'new_island_results', locals: { island: @island }
     else
       render "new", status: :unprocessable_entity
-      render partial: 'new_island_results', locals: { island: @island }
     end
   end
 
@@ -42,3 +41,4 @@ class IslandsController < ApplicationController
   def island_params
     params.require(:island).permit(:name, :description, :location, :price, photos: [])
   end
+end
