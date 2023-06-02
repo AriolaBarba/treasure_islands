@@ -1,35 +1,5 @@
-<div class="container pt-5">
-  <h2><%= @island.name %></h2>
-  <div class="banner">
-    <% if @island.photos.attached? %>
-      <%= cl_image_tag @island.photos[0].key, width: "60%", height: "auto", crop: :fill %>
-      <%= cl_image_tag @island.photos[1].key, width: "60%", height: "auto", crop: :fill %>
-    <% else %>
-      <%= image_tag "island2.jpg", width: "60%", height: "auto" %>
-      <%= image_tag "island3.jpg", width: "60%", height: "auto" %>
-    <% end %>
-  </div>
 
-  <p><%= @island.description %></p>
-  <p><%= @island.location %></p>
-  <p><%= @island.price %></p>
 
-  <%= simple_form_for [@island, @booking] do |f| %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
-    <% if @island.user != current_user %>
-      <%= f.button :submit %>
-    <% else %>
-      <%= f.button :submit, disabled: true %>
-    <% end %>
-  <% end %>
-
-  <div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-  <div class="banner">
-    <%= link_to "Back to islands", islands_path %>
 
 <div class="container">
 <h2 class="header"><%= @island.name %></h2>
@@ -94,6 +64,13 @@
   </div>
   </div>
   <%= link_to "Back to islands", islands_path %>
+
+    <div style="width: 100%; height: 500px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  <div class="banner">
+    <%= link_to "Back to islands", islands_path %>
 
 </div>
 
