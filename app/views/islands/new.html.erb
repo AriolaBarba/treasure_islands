@@ -1,28 +1,26 @@
 
-  <h3>List your Island</h3>
-  <%= simple_form_for @island do |f| %>
-    <%= f.input :name, placeholder: 'name:' %>
-    <%= f.input :location, placeholder: 'location:'%>
-    <%= f.input :description, placeholder: 'description:' %>
-    <%= f.input :price %>
-
-     <div class="form-group">
-    <%= f.label :image %>
-
-  </div>
-
-    <%= f.submit class: 'btn btn-flat' %>
-  <% end %>
-  <div class=form-new-island>
-    <h3 class="list-your-island-header">List your Island</h3>
-    <%= simple_form_for @island do |f| %>
-      <%= f.input :name, placeholder: 'name:', input_html: { class: 'new-island-inputs-1' } %>
-      <%= f.input :location, placeholder: 'location:', input_html: { class: 'new-island-inputs-2' } %>
-      <%= f.input :price, placeholder: 'price:', input_html: { class: 'new-island-inputs-3' }%>
-      <%= f.text_area :description, placeholder: 'description:', class: "new-island-inputs-4" %>
-      <%= f.input :photos, as: :file, input_html: { multiple: true }%>
-      <%# , input_html: { class: 'new-island-inputs-5' }  %>
-      <%= f.submit class: 'new-island-inputs-6' %>
-    <% end %>
+<div class="new-background ">
+  <div class="header-image">
+    <div class="content-container">
+      <div class="col-8">
+        <div class="box1">
+          <h2 class="your-islands-header">Your Islands</h2>
+          <div id="new-island-results"></div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="box2">
+          <h3 class="list-your-island-header">List a new Island</h3>
+          <%= simple_form_for @island do |f| %>
+            <%= f.input :name, placeholder: 'Coral Island' %>
+            <%= f.input :location, placeholder: 'The Great Barrier Reef' %>
+            <%= f.input :price %>
+            <%= f.input :description, as: :text, input_html: { rows: 3 }  %>
+            <%= f.input :photos, as: :file, input_html: { multiple: true }  %>
+            <%= f.submit %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

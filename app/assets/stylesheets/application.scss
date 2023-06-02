@@ -7,7 +7,21 @@
 @import "font-awesome";
 
 // Your CSS partials
-@import "components/index.scss";
-@import "pages/index.scss";
+@import "components/index";
+@import "pages/index";
 
+.test {
+  color: rgb(75, 31, 198)
+}
+.mapboxgl-popup {
+  max-width: 200px;
+}
 
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: rgba(217, 206, 183, 0.1);
+}

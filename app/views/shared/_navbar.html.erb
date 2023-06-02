@@ -1,27 +1,20 @@
+
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-
   <div class="container-fluid">
-
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to "/islands", class: "navbar-brand" do %>
       <%= image_tag "new_logo.png" %>
     <% end %>
-
-
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-
     </button>
+      <h4 style="margin-bottom: 0px;">TREASURE ISLANDS</h4>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <%# if user_signed_in? %>
+      <ul class="navbar-nav me-auto", style="align-items:center;">
+        <%= link_to "Add a new island", new_island_path, class: "hyperlink-gold" %>
+        <% if user_signed_in? %>
           <li class="nav-item active">
 
-           <%= link_to "Add a new island", new_island_path, class: "btn btn-primary mt-2 btn-sm" %>
-
-          </li>
-          <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "bluesteel.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -31,6 +24,7 @@
               <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
+<<<<<<< HEAD
 
         <%# else %>
           <!--li class="nav-item"-->
@@ -46,6 +40,9 @@
         
 
 
+=======
+        <% end %>
+>>>>>>> e213e4c609fa18e8d225b783c5de518572b9df50
       </ul>
     </div>
   </div>

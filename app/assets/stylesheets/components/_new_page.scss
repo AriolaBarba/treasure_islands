@@ -1,0 +1,118 @@
+
+.list-your-island-header {
+  font-family: 'Cormorant Garamond', serif;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.your-islands-header {
+  font-family: 'Cormorant Garamond', serif;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.header-image {
+  width: 100%;
+  height: 220px;
+  left: 447px;
+  top: 83px;
+  background-image: url('/assets/new-background.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.col-4 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+
+.col-8 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+.box1 {
+
+  padding: 40px;
+  padding-top: 20px;
+  margin-right: 20px;
+  background: rgba(174, 141, 74, 0.1);
+  color: #AE8D4A;
+  position: absolute;
+  margin-top: 225px; /* Adjust the value as needed */
+  right: 0; /* Adjust the value as needed */
+  left: 0px;
+  overflow-y: auto;
+  word-wrap: break-word; /* Add this line to wrap text within the box */
+  height: auto;
+}
+
+.box2 {
+  padding: 20px 50px;
+  margin-left: 5px;
+  background: rgba(174, 141, 74, 0.1);
+  color: #AE8D4A;
+  // position: absolute;
+  margin-top: 225px; /* Adjust the value as needed */
+  // right: 0px; /* Adjust the value as needed */
+  // left: 0;
+  // overflow-y: auto;
+  // word-wrap: break-word; /* Add this line to wrap text within the box */
+  height: 90vh;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+input[type="text"]::placeholder {
+  opacity: 0.6; /* Adjust the opacity value as needed */
+}
+
+
+input[type="text"],
+input[type="number"] {
+  border: none;
+  background: none;
+  border-bottom: 1px solid #ccccccab;
+  padding-bottom: 5px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+}
+
+
+input[type="submit"] {
+  background-color: #b08c4386; /* Set the background color */
+  color: #000000; /* Set the text color */
+  padding: 10px 20px; /* Adjust the padding as needed */
+  border: none; /* Remove the border */
+  border-radius: 4px; /* Apply border radius if desired */
+  cursor: pointer; /* Set cursor style on hover */
+}
+
+input[type="submit"]:hover {
+  background-color: #b08c43; /* Set the background color on hover */
+  transition: 0.4s;
+}

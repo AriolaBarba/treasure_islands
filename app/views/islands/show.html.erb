@@ -1,24 +1,68 @@
+<div class="container pt-5">
+  <h2><%= @island.name %></h2>
+  <div class="banner">
+    <% if @island.photos.attached? %>
+      <%= cl_image_tag @island.photos[0].key, width: "60%", height: "auto", crop: :fill %>
+      <%= cl_image_tag @island.photos[1].key, width: "60%", height: "auto", crop: :fill %>
+    <% else %>
+      <%= image_tag "island2.jpg", width: "60%", height: "auto" %>
+      <%= image_tag "island3.jpg", width: "60%", height: "auto" %>
+    <% end %>
+  </div>
+
+  <p><%= @island.description %></p>
+  <p><%= @island.location %></p>
+  <p><%= @island.price %></p>
+
+  <%= simple_form_for [@island, @booking] do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <% if @island.user != current_user %>
+      <%= f.button :submit %>
+    <% else %>
+      <%= f.button :submit, disabled: true %>
+    <% end %>
+  <% end %>
+
+  <div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  <div class="banner">
+    <%= link_to "Back to islands", islands_path %>
 
 <div class="container">
 <h2 class="header"><%= @island.name %></h2>
 <p class="location"><%= @island.location %></p>
 
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="false" data-touch="true" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active" style="height: 550px">
-      <img class="d-block img-fluid w-100" src="https://images.unsplash.com/photo-1620065487644-1080510335f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2232&q=80" alt="First slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+ <div id="modelCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#modelCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#modelCarousel" data-slide-to="1"></li>
+      <li data-target="#modelCarousel" data-slide-to="2"></li>
+    </ol>
 
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <%= image_tag @island.photos[0], class: "d-block w-100" %>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag @island.photos[1], class: "d-block w-100" %>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag "https://images.unsplash.com/photo-1652842183703-47c2f7bb8c3c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGlzbGFuZCUyMGJvcmElMjBib3JhfGVufDB8fDB8fHww&auto=format&fit=crop&w=900&q=60", class: "d-block w-100" %>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#modelCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#modelCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 
 
 <%# <div class="banner">
@@ -52,3 +96,7 @@
   <%= link_to "Back to islands", islands_path %>
 
 </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>

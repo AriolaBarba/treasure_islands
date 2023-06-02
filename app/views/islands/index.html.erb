@@ -1,33 +1,33 @@
-<div class="index-background">
-
-
-<div class="container pt-5">
- 
-
-
-  <div class="container pt-5">
-   <h1>Welcome to Treasure Islands</h1>
-    <p>Your treasure is our pleasure! Don't be like the rest and rent some stinky accommodation with bad karmic vibes.
-      Spend some real money with us and rent out an entire island to yourself with zero nosy neighbors.
-      As a great man once said, "Do what thou Wilt!".
-      I mean, come on, if you have the money, why shouldn't you be able to do what you want, right?
-      Sacrificial cats not supplied...</p>
-  </div>
-
-  <h2>Our Amazing Islands</h2>
-  <div class="row">
-    <% @islands.each do |island| %>
-      <div class="col-md-4 mb-4">
-        <div class="card">
-
-          <%# <%= link_to image_tag("images/#{island.image_url}"), island_path(island) %>
-          <div class="card-body">
-            <h5 class="card-title"><%= link_to island.name, island_path(island) %></h5>
-
-          </div>
-        </div>
-      </div>
-    <% end %>
+<div class="homebanner w-100" style="background-image: url(https://images.unsplash.com/photo-1536708880921-03a9306ec47d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1550&q=80);">
+</div>
+<div class="separate d-flex">
+<div>
+<img class="homeimage" src="https://images.unsplash.com/photo-1652842183703-47c2f7bb8c3c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dHJvcGljYWwlMjBpc2xhbmQlMjBib3JhJTIwYm9yYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=900&q=60" alt="hello">
+</div>
+  <div class="welcome">
+    <h1>Welcome to Treasure Islands</h1>
+      <p>Your treasure is our pleasure! Don't be like the rest and rent some stinky accommodation with bad karmic vibes.
+        Spend some real money with us and rent out an entire island to yourself with zero nosy neighbors.
+        As a great man once said, "Do what thou Wilt!".
+        I mean, come on, if you have the money, why shouldn't you be able to do what you want, right?
+        Sacrificial cats not supplied...</p>
   </div>
 </div>
+
+<div class="container pt-5">
+    <h2>Find Your Island</h2>
+    <div class="row">
+      <% @islands.each do |island| %>
+        <div class="col-md-3 mb-3">
+          <div class="card">
+
+            <%# <%= link_to image_tag("images/#{island.image_url}"), island_path(island) %>
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to island.name, island_path(island) %></h5>
+              <img class="cardimage" src="<%=island.photos[0]%>" alt="monkey">
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
 </div>
