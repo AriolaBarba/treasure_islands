@@ -5,15 +5,19 @@
       <div class="col-8">
         <div class="box1">
           <h2 class="your-islands-header">Your Islands</h2>
-          <div class="your-islands-card">
-          <% if @my_islands != nil %>
-          <% @my_islands.each do |island| %>
-          <%= island.name %>
-          <%= island.location %>
-          <%= island.price %>
-          <%= cl_image_tag island.photos[0].key %>
-          <% end %>
-          <% end %>
+          <div class="your-islands-card-container">
+            <% if @my_islands != nil %>
+              <% @my_islands.each do |island| %>
+                <div class="your-island-cards">
+                  <%= cl_image_tag island.photos[0].key, height: "150px", width: "300px" %>
+                  <div class="island-card-content">
+                  <p>name: <%= island.name %></p>
+                  <p>location: <%= island.location %></p>
+                  <p>price: <%= island.price %></p>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
           </div>
           <%# <div id="new-island-results"></div> %>
         </div>
