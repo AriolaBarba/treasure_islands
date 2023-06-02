@@ -10,7 +10,7 @@ User.destroy_all
 
 user = User.create(email: "lola@gmail.com", password: "claralala")
 
-Island.create(user: user, name: "Monkey Island", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", location: "Bora Bora", price: "£1000")
+Island.create(user: user, name: "Monkey Island", description: "Monkeys are cheeky little things", location: " F6VX+57Q, Vaitāpē, French Polynesia", latitude: 16.5070, longitude: 151.7518, price: 1000)
 Island.create(user: user, name: "Skull Island", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", location: "Micronesia", price: "£1000")
 Island.create(user: user, name: "Shipwreck Island", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", location: "Ionian Sea", price: "£1000")
 Island.create(user: user, name: "Coconut Island", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", location: "Caribbean", price: "£1000")

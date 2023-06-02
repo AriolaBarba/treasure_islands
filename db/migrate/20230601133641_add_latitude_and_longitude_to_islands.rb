@@ -1,5 +1,5 @@
 class AddLatitudeAndLongitudeToIslands < ActiveRecord::Migration[7.0]
   def change
-    add_column :islands, :longitude, :decimal
+    add_column :islands, :longitude, :float
   end
 end

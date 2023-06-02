@@ -6,20 +6,22 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
+    <title>Add custom markers in Mapbox GL JS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-<<<<<<< HEAD
 
-=======
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
->>>>>>> 1fae210888930be2f51870d0a5adcd66421b863c
   </head>
 
   <body>
@@ -27,15 +29,39 @@
     <%= yield %>
     <div id="map"></div>
 
-    <%# <%= javascript_include_tag "https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js" %> %>
-<script>
-  mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-74.5, 40], // Example center coordinates
-    zoom: 9 // Example zoom level
-  });
-</script>
-  </body>
-</html>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1Ijoid2lzYmVhY2giLCJhIjoiY2xob3cyMTcxMjBqcTNocXBicjhncWNsdSJ9.AP59Ew9AXh1LdRhRZiiiGQ';
+
+      const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/wisbeach/clid86jxk002e01pgdte5fzxh',
+        center: [-96, 37.8],
+        zoom: 3
+      });
+
+      const geojson = {
+        type: 'FeatureCollection',
+        features: [
+          {
+            type: 'Feature',
+            geometry: {
+              type: 'Point',
+              coordinates: [-77.032, 38.913]
+            },
+            properties: {
+              title: 'Mapbox',
+              description: 'Washington, D.C.'
+            }
+          },
+          {
+            type: 'Feature',
+            geometry: {
+              type: 'Point',
+              coordinates: [-122.414, 37.776]
+            },
+            properties: {
+              title: 'Mapbox',
+              description: 'San Francisco, California'
+            }
+          }
+        ]

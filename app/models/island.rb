@@ -5,5 +5,5 @@ class Island < ApplicationRecord
   attribute :longitude, :decimal
   attribute :address, :string
   geocoded_by :location
-  after_validation :geocode
+  after_validation :geocode , if: :will_save_change_to_location?
 end
