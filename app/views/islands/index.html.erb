@@ -2,7 +2,7 @@
 
 
 <div class="container pt-5">
- 
+
 
 
   <div class="container pt-5">
@@ -23,6 +23,11 @@
           <%# <%= link_to image_tag("images/#{island.image_url}"), island_path(island) %>
           <div class="card-body">
             <h5 class="card-title"><%= link_to island.name, island_path(island) %></h5>
+            <% if island.photos %>
+              <%= image_tag island.photos[0] %>
+            <% else %>
+              <%= image_tag "https://media.istockphoto.com/id/538480010/photo/landscape-on-green-moorea.webp?b=1&s=170667a&w=0&k=20&c=bEztCcuwuk7AQELdFc-IvZNK1hPlmnMtfR0uSzcgjzc=" %>
+            <% end %>
 
           </div>
         </div>
