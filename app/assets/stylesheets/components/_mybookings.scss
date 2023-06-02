@@ -1,5 +1,15 @@
-.card-booking {
+
+.booking-card-container {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  height: 160px;
+}
+
+
+
+.booking-card-content {
   background-color: white;
-  text-decoration: none;
-  text-align: center;
+  // text-align: left;
+  padding: 20px;
 }
